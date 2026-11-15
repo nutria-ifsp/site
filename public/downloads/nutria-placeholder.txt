@@ -1,0 +1,4 @@
+Nutria — arquivo de demonstração para testar o botão de download.
+
+Este é um arquivo de texto, não um pacote APK Android, e não pode ser instalado.
+Substitua-o pelo APK Android assinado do Nutria antes da distribuição real.
