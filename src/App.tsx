@@ -170,7 +170,7 @@ function App() {
       </main>
       <footer className="site-footer" id="contato">
         <div className="page-width footer-top">
-          <a className="footer-logo" href="#inicio" aria-label="Nutria — voltar ao início"><img src="/assets/7-7.svg" alt="Nutria" /></a>
+          <a className="footer-logo" href="#inicio" aria-label="Nutria — voltar ao início"><img src={publicPath('assets/7-7.svg')} alt="Nutria" /></a>
           <span className="footer-tagline">Alimentando uma vida melhor.</span>
           <nav className="footer-nav" aria-label="Navegação do rodapé">
             <a href="#como-funciona">O aplicativo</a><a href="#metas">Nutrição</a><a href="#comunidade">Comunidade</a><a href="#como-funciona">Sobre o Nutria</a><a href="mailto:contato@nutria.app">Contato</a>

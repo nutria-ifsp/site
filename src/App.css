@@ -82,3 +82,9 @@ button.button-primary{border:0;cursor:pointer;font-family:inherit}
 .theme-toggle:hover{background:#fff2e8;color:#ff4400;border-color:#f0d2c3}
 .theme-toggle:focus-visible{outline:3px solid #6b3eff;outline-offset:3px}
 @media(max-width:760px){.nav-controls{gap:8px;margin-left:10px}.theme-toggle{width:40px;height:40px}:root[data-theme='dark'] .main-nav{background:#1b1d22}}
+
+/* Alinha a marca da navbar à mesma largura de conteúdo das seções. */
+.nav-wrap{width:min(1192px,calc(100% - 72px))}
+@media (max-width:1050px){.nav-wrap{width:min(100% - 56px,920px)}}
+@media (max-width:760px){.nav-wrap{width:calc(100% - 40px)}}
+@media (max-width:380px){.nav-wrap{width:calc(100% - 32px)}}
