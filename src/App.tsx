@@ -36,7 +36,10 @@ function Icon({ name, size = 20 }: { name: IconName; size?: number }) {
   }
 }
 
-const photo = (id: string) => `/assets/${id}.webp`
+const publicPath = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
+
+const photo = (id: string) => publicPath(`assets/${id}.webp`)
 
 function getInitialTheme(): ThemeMode {
   if (typeof window === 'undefined') return 'light'
