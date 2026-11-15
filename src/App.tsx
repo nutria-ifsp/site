@@ -89,7 +89,7 @@ function App() {
 
     if (/Android/i.test(userAgent)) {
       const link = document.createElement('a')
-      link.href = '/downloads/nutria-placeholder.txt'
+      link.href = publicPath('downloads/nutria-placeholder.txt')
       link.download = 'nutria-preview.txt'
       document.body.appendChild(link)
       link.click()
@@ -105,7 +105,7 @@ function App() {
     <>
       <header className="site-header">
         <div className="nav-wrap">
-          <a className="brand" href="#inicio" aria-label="Nutria — início" onClick={closeMenu}><img src="/assets/7-7.svg" alt="Nutria — Alimentando uma vida melhor" /></a>
+          <a className="brand" href="#inicio" aria-label="Nutria — início" onClick={closeMenu}><img src={publicPath('assets/7-7.svg')} alt="Nutria — Alimentando uma vida melhor" /></a>
           <nav id="main-navigation" className={`main-nav${menuOpen ? ' is-open' : ''}`} aria-label="Navegação principal">
             <a href="#como-funciona" onClick={closeMenu}>Como funciona</a><a href="#metas" onClick={closeMenu}>No seu ritmo</a><a href="#comunidade" onClick={closeMenu}>Comunidade</a>
             <button className="button button-small nav-cta" type="button" aria-haspopup="dialog" onClick={() => { closeMenu(); handleDownload() }}>Baixar o app <Icon name="arrow" size={16} /></button>
@@ -132,7 +132,7 @@ function App() {
               <div className="hero-sticker sticker-top"><span className="sticker-icon"><Icon name="spark" size={18} /></span><span><strong>Feito para você</strong><small>e para a sua rotina</small></span></div>
               <article className="phone-preview">
                 <div className="phone-topline"><span className="phone-camera" /><span>9:41</span><span className="phone-status">● ● ▰</span></div>
-                <div className="phone-header"><img src="/assets/7-11.svg" alt="Nutria" /><span className="icon-button" aria-hidden="true">♡</span></div>
+                <div className="phone-header"><img src={publicPath('assets/7-11.svg')} alt="Nutria" /><span className="icon-button" aria-hidden="true">♡</span></div>
                 <div className="story-row" aria-label="Pessoas da sua comunidade"><div className="story story-add"><span>+</span><small>Seu dia</small></div><div className="story"><img src={photo('2-45')} alt="" /><small>ana.c</small></div><div className="story"><img src={photo('2-47')} alt="" /><small>luiza.m</small></div><div className="story"><img src={photo('2-44')} alt="" /><small>gui.r</small></div></div>
                 <div className="feed-post"><div className="post-author"><img src={photo('2-45')} alt="" /><span><strong>ana.costa</strong><small>Almoço no escritório</small></span><span className="more-dots">···</span></div><div className="post-photo"><img src={photo('2-46')} alt="Uma refeição leve durante o expediente" /><span className="photo-tag"><Icon name="leaf" size={13} /> refeição equilibrada</span></div><div className="post-reactions"><button type="button" className={`reaction-hearts like-button${liked ? ' is-liked' : ''}`} aria-label={liked ? 'Descurtir publicação' : 'Curtir publicação'} aria-pressed={liked} onClick={() => setLiked((active) => !active)}><Icon name="heart" size={17} /> <strong>{liked ? 25 : 24}</strong></button><span>um prato de cada vez</span><span className="bookmark">⌑</span></div><div className="post-caption"><strong>ana.costa</strong> Pausa gostosa entre reuniões. <span>#almoçoreal</span></div></div>
                 <div className="nutrition-strip"><div><small>Seu prato</small><strong>Uma escolha <em>de cada vez</em></strong></div><span className="strip-leaf"><Icon name="leaf" size={18} /></span></div>
